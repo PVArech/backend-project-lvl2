@@ -1,0 +1,32 @@
+{
+  "name": "@hexlet/code",
+  "version": "0.0.1",
+  "description": "Compares two configuration files and shows a difference.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "genDiff": "bin/genDiff.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PVArech/backend-project-lvl2.git"
+  },
+  "author": "PVArech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PVArech/backend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/PVArech/backend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "jest": "^27.0.6"
+  }
+}
