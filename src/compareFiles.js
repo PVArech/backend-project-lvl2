@@ -13,11 +13,11 @@ export const compareFiles = (filePath1, filePath2, format) => {
   const keys2 = _.keys(objTwo);
   const keys = _.union(keys1, keys2);
   
-  const result = keys.sort()
-  .reduce((acc, key) => { 
-    if (objOne[key] === objTwo[key]) return [...acc, `    ${key}: ${objTwo[key]}`];
-    if (objOne[key] !== undefined) acc.push(`  - ${key}: ${objOne[key]}`);
-    if (objTwo[key] !== undefined) acc.push(`  + ${key}: ${objTwo[key]}`);
+const result = keys.sort()
+.reduce((acc, key) => { 
+  if (objOne[key] === objTwo[key]) return [...acc, `    ${key}: ${objTwo[key]}`];
+  if (objOne[key] !== undefined) acc.push(`  - ${key}: ${objOne[key]}`);
+  if (objTwo[key] !== undefined) acc.push(`  + ${key}: ${objTwo[key]}`);
 
     return acc;
   }, []);
