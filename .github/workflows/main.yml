@@ -1,5 +1,5 @@
 # Name of workflow
-name: eslint
+name: eslint-test  
 
 # Trigger the workflow on push or pull request
 on:
