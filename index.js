@@ -1,4 +1,4 @@
-import main from './src/main.js';
+// import main from './src/main.js';
+import { compareFiles } from './src/compareFiles.js';
 
-// main();
-export default main;
+export default compareFiles;
