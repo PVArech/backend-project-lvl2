@@ -1,11 +1,14 @@
 import fs from 'fs';
+import path from 'path';
 import _ from 'lodash';
+import parsers from './parsers.js';
 
-const readFiles = (fullPath) => fs.readFileSync(fullPath, 'utf-8');
+const getContent = (fullPath) => fs.readFileSync(fullPath, 'utf-8');
+const getExtension = (fullPath) => path.extname(fullPath);
 
-export const compareFiles = (filePath1, filePath2) => {
-  const objOne = JSON.parse(readFiles(filePath1));
-  const objTwo = JSON.parse(readFiles(filePath2));
+const compareFiles = (filePath1, filePath2) => {
+  const objOne = parsers(getContent(filePath1), getExtension(filePath1));
+  const objTwo = parsers(getContent(filePath2), getExtension(filePath2));
   const keys = _.union(_.keys(objOne), _.keys(objTwo)).sort();
 
   const result = keys.reduce((acc, key) => {
@@ -19,4 +22,4 @@ export const compareFiles = (filePath1, filePath2) => {
   return result.join('\n');
 };
 
-export default readFiles;
+export default compareFiles;

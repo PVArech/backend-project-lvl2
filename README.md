@@ -5,5 +5,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/15b8f90bd8b1e1590719/test_coverage)](https://codeclimate.com/github/PVArech/backend-project-lvl2/test_coverage)
 
 
-## asciinema genDiff
+## asciinema genDiff json:
 [![asciicast](https://asciinema.org/a/1dxNCVfvfLzAnbiqvlUKAtElh.svg)](https://asciinema.org/a/1dxNCVfvfLzAnbiqvlUKAtElh)
+
+## asciinema genDiff yaml:
+[![asciicast](https://asciinema.org/a/5pEOWUchz0RHAqUneKH3DjZFW.svg)](https://asciinema.org/a/5pEOWUchz0RHAqUneKH3DjZFW)
