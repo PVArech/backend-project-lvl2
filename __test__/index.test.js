@@ -13,22 +13,22 @@ const getContent = (filename) => fs.readFileSync(getFilePath(filename), 'utf-8')
 test('genDiff json', () => {
   const file1 = getFilePath('file1.json');
   const file2 = getFilePath('file2.json');
-  const result = getContent('expected_file.json');
+  const result = getContent('expected_stylish.txt');
   expect(genDiff(file1, file2)).toEqual(result);
 });
 
-describe('genDiff yaml', () => {
+describe('genDiff yml', () => {
   test('genDiff yml', () => {
     const file1 = getFilePath('file1.yml');
     const file2 = getFilePath('file2.yml');
-    const result = getContent('expected_file.yml');
+    const result = getContent('expected_stylish.txt');
     expect(genDiff(file1, file2)).toEqual(result);
   });
 
   test('genDiff yaml', () => {
     const file1 = getFilePath('file1.yaml');
     const file2 = getFilePath('file2.yaml');
-    const result = getContent('expected_file.yaml');
+    const result = getContent('expected_file.txt');
     expect(genDiff(file1, file2)).toEqual(result);
   });
 });

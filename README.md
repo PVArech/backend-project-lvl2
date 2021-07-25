@@ -10,3 +10,6 @@
 
 ## asciinema genDiff yaml:
 [![asciicast](https://asciinema.org/a/5pEOWUchz0RHAqUneKH3DjZFW.svg)](https://asciinema.org/a/5pEOWUchz0RHAqUneKH3DjZFW)
+
+## asciinema genDiff recursion:
+[![asciicast](https://asciinema.org/a/VSbv5P70uosjCqEODh30TCro7.svg)](https://asciinema.org/a/VSbv5P70uosjCqEODh30TCro7)
