@@ -4,11 +4,11 @@
   "description": "Compares two configuration files and shows a difference.",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "npx jest --bail"
-  },
   "bin": {
     "genDiff": "bin/genDiff.js"
+  },
+  "scripts": {
+    "test": "npx jest --bail"
   },
   "repository": {
     "type": "git",
