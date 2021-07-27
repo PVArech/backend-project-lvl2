@@ -20,6 +20,6 @@ asci:
 	asciinema rec
 
 publish:
-	npm publish
+	npm publish --dry-run
 
 .PHONY: test	
