@@ -13,8 +13,10 @@ const getContent = (filename) => fs.readFileSync(getFilePath(filename), 'utf-8')
 const cases = [
   ['json', 'stylish', 'expected_stylish.txt'],
   ['json', 'plain', 'expected_plain.txt'],
+  ['json', 'json', 'expected_json.txt'],
   ['yml', 'stylish', 'expected_stylish.txt'],
   ['yml', 'plain', 'expected_plain.txt'],
+  ['yml', 'json', 'expected_json.txt'],
   ['yaml', 'stylish', 'expected_stylish_yaml.txt'],
   ['yaml', 'plain', 'expected_plain_yaml.txt'],
 ];
