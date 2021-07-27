@@ -13,3 +13,6 @@
 
 ## asciinema genDiff recursion:
 [![asciicast](https://asciinema.org/a/VSbv5P70uosjCqEODh30TCro7.svg)](https://asciinema.org/a/VSbv5P70uosjCqEODh30TCro7)
+
+## asciinema genDiff format 'plain':
+[![asciicast](https://asciinema.org/a/oPWQJwm9PcRgpsGiMgQn4GHjL.svg)](https://asciinema.org/a/oPWQJwm9PcRgpsGiMgQn4GHjL)

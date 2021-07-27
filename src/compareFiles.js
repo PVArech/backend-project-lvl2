@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
 import parsers from './parsers.js';
-import getStylishFormat from './formatters/stylish.js';
+import formats from './formatters/index.js';
 
 const getContent = (fullPath) => fs.readFileSync(fullPath, 'utf-8');
 const getExtension = (fullPath) => path.extname(fullPath);
@@ -30,19 +30,11 @@ const makeDiff = (objOne, objTwo) => {
 };
 
 const compareFiles = (filePath1, filePath2, format = 'stylish') => {
+// const compareFiles = (filePath1, filePath2, format) => {
   const objOne = parsers(getContent(filePath1), getExtension(filePath1));
   const objTwo = parsers(getContent(filePath2), getExtension(filePath2));
   const diff = makeDiff(objOne, objTwo);
-  // if (format === 'stylish')
-  //  return getStylishFormat(diff);
-  // }
-  switch (format) {
-    case 'stylish':
-      return getStylishFormat(diff);
-
-    default:
-      throw new Error(`Unknown format: '${format}'!`);
-  }
+  return formats(diff, format);
 };
 
 export default compareFiles;

@@ -10,25 +10,24 @@ const __dirname = path.dirname(__filename);
 const getFilePath = (filename) => path.join(__dirname, '..', '__fixtures__', `/${filename}`);
 const getContent = (filename) => fs.readFileSync(getFilePath(filename), 'utf-8');
 
-test('genDiff json', () => {
-  const file1 = getFilePath('file1.json');
-  const file2 = getFilePath('file2.json');
-  const result = getContent('expected_stylish.txt');
-  expect(genDiff(file1, file2)).toEqual(result);
-});
+const cases = [
+  ['json', 'stylish', 'expected_stylish.txt'],
+  ['json', 'plain', 'expected_plain.txt'],
+  ['yml', 'stylish', 'expected_stylish.txt'],
+  ['yml', 'plain', 'expected_plain.txt'],
+  ['yaml', 'stylish', 'expected_stylish_yaml.txt'],
+  ['yaml', 'plain', 'expected_plain_yaml.txt'],
+];
 
-describe('genDiff yml', () => {
-  test('genDiff yml', () => {
-    const file1 = getFilePath('file1.yml');
-    const file2 = getFilePath('file2.yml');
-    const result = getContent('expected_stylish.txt');
-    expect(genDiff(file1, file2)).toEqual(result);
-  });
-
-  test('genDiff yaml', () => {
-    const file1 = getFilePath('file1.yaml');
-    const file2 = getFilePath('file2.yaml');
-    const result = getContent('expected_file.txt');
-    expect(genDiff(file1, file2)).toEqual(result);
-  });
+describe('test genDiff, each cases', () => {
+  test.each(cases)(
+    'files of type %p formatted as %p are expected to match %p',
+    (type, format, expectedResult) => {
+      const file1 = getFilePath(`file1.${type}`);
+      const file2 = getFilePath(`file2.${type}`);
+      const generateDiff = genDiff(file1, file2, format).trim();
+      const result = getContent(expectedResult).trim();
+      expect(generateDiff).toEqual(result);
+    },
+  );
 });
