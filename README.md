@@ -18,4 +18,4 @@
 [![asciicast](https://asciinema.org/a/oPWQJwm9PcRgpsGiMgQn4GHjL.svg)](https://asciinema.org/a/oPWQJwm9PcRgpsGiMgQn4GHjL)
 
 ## asciinema genDiff
-[![asciicast](https://asciinema.org/a/h64qztzoZoywJD9e0VIFVzUEY.svg)](https://asciinema.org/a/h64qztzoZoywJD9e0VIFVzUEY)
+[![asciicast](https://asciinema.org/a/a84O8St6oGcKLLwG0PkH6zPH4.svg)](https://asciinema.org/a/a84O8St6oGcKLLwG0PkH6zPH4)
