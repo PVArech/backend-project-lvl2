@@ -8,7 +8,7 @@ const getContent = (fullPath) => fs.readFileSync(fullPath, 'utf-8');
 const getExtension = (fullPath) => path.extname(fullPath);
 
 const makeDiff = (objOne, objTwo) => {
-  const keys = _.union(_.keys(objOne), _.keys(objTwo));
+  const keys = _.union(_.keys(objOne), _.keys(objTwo)).sort();
 
   return keys.map((key) => {
     if (_.isObject(objOne[key]) && _.isObject(objTwo[key])) {
