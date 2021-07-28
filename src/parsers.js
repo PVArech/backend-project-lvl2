@@ -1,14 +1,9 @@
 import yaml from 'js-yaml';
-// import ini from 'ini';
 
 export default (content, extension) => {
-  let parse;
   if (extension === '' || extension === '.json') {
-    parse = JSON.parse;
+    return JSON.parse(content);
   } else if (extension === '.yaml' || extension === '.yml') {
-    parse = yaml.safeLoad;
-  } // else if (extension === '.ini') {
-  // parse = ini.parse;
-  // }
-  return parse(content);
+    return yaml.safeLoad(content);
+  }
 };
