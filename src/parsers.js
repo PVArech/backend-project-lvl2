@@ -6,13 +6,13 @@ export default (content, extension) => {
       return JSON.parse(content);
 
     case '.json':
-      return JSON.parse(content)
+      return JSON.parse(content);
 
     case '.yaml':
       return yaml.safeLoad(content);
-      
+
     case '.yml':
-      return yaml.safeLoad(content);      
+      return yaml.safeLoad(content);
 
     default:
       throw new Error(`Unknown extension: '${extension}'!`);
