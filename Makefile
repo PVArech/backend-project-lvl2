@@ -22,4 +22,4 @@ asci:
 publish:
 	npm publish --dry-run
 
-.PHONY: test	
+.PHONY: test
